@@ -34,50 +34,8 @@ class MyHomePage extends StatelessWidget {
 
       body: SafeArea(
         bottom: false,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-
-            Image.asset("assets/img/LOGO-DIEGO-ORIGINAL1.png", width: size.width * 0.2),
-            Text(
-              "AstroMap",
-              style: TextStyle(
-                fontSize: size.width * 0.14,
-                fontWeight: FontWeight.bold
-              ),
-            ),
-            SizedBox(height: 20),
-
-            Text("Iniciar sesión", style: TextStyle(fontSize: size.width * 0.08)),
-
-            SizedBox(height: 20),
-            TextFieldCustom(hintText: "Nombre de usuario"),
-            SizedBox(height: 20),
-            TextFieldCustom(hintText: "Contraseña"),
-
-            SizedBox(height: 20),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)
-                ),
-                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20)
-              ),
-              onPressed: () {},
-              child: Text("Iniciar sesión", style: TextStyle(color: Colors.black)),
-            ),
-
-            SizedBox(height: 20),
-
-            TextButton(
-              onPressed: () {},
-              child: Text("¿Olvidaste tu contraseña?", style: TextStyle(color: Colors.white)),
-            ),
-
-            SizedBox(height: 20),
-
+        child: Stack(
+          children: [ 
 
             Align(
               alignment: Alignment.bottomCenter,
@@ -85,12 +43,20 @@ class MyHomePage extends StatelessWidget {
                 children: [
                   Container(
                     width: double.infinity,
-                    height: 200,
+                    height: size.height * 0.3,
                     decoration: BoxDecoration(
+                      // borderRadius: BorderRadius.only(topLeft: Radius.circular(100), topRight: Radius.circular(100)),
                       gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: generateGradientColors()
+                      colors: [
+                        Colors.white.withOpacity(0.3),
+                        Colors.white24,
+                        Colors.white12,
+                        
+                        Colors.black12,
+                        
+                      ],
+                      begin: Alignment.bottomCenter,
+                      end: Alignment.topCenter,
                       )
                     )
                   ),
@@ -103,6 +69,55 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
 
+            SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+              
+                  Image.asset("assets/img/LOGO-DIEGO-ORIGINAL1.png", width: size.width * 0.2),
+                  Text(
+                    "AstroMap",
+                    style: TextStyle(
+                      fontSize: size.width * 0.14,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+              
+                  Text("Iniciar sesión", style: TextStyle(fontSize: size.width * 0.08)),
+              
+                  const SizedBox(height: 20),
+                  const TextFieldCustom(hintText: "Nombre de usuario"),
+                  const TextFieldCustom(hintText: "Contraseña"),
+              
+                  const SizedBox(height: 10),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+              
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20)
+                    ),
+                    onPressed: () {},
+                    child: const Text("Iniciar sesión", style: TextStyle(color: Colors.black)),
+                  ),
+              
+                  const SizedBox(height: 20),
+              
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text("¿Olvidaste tu contraseña?", style: TextStyle(color: Colors.white)),
+                  ),
+              
+                  const SizedBox(height: 20),
+              
+    
+              
+                ],
+              ),
+            ),
 
           ],
         ),
@@ -113,7 +128,7 @@ class MyHomePage extends StatelessWidget {
 
 List<Color> generateGradientColors() {
   List<Color> colors = [];
-  for (int i = 0; i <= 15; i++) {
+  for (int i = 0; i <= 45; i++) {
     double opacity = 0.05 + (i * 0.01);
     colors.add(Colors.white.withOpacity(opacity));
   }

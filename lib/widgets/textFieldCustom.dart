@@ -9,22 +9,25 @@ class TextFieldCustom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        TextField(
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.black
-          ),
-          decoration: InputDecoration(
-            filled: true,
-            fillColor: Colors.white,
-            hintText: hintText,
-            hintStyle: TextStyle(
-              color: Colors.grey                
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: TextField(
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.black
             ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30),
-              borderSide: BorderSide.none
-            )
+            decoration: InputDecoration(
+              filled: true,
+              fillColor: Colors.white,
+              hintText: hintText,
+              hintStyle: TextStyle(
+                color: Colors.grey                
+              ),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(30),
+                borderSide: BorderSide.none
+              )
+            ),
           ),
         ),
       ],
