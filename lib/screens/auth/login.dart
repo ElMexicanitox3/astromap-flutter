@@ -1,4 +1,6 @@
 import 'package:astromap/screens/auth/layout/auth_layout.dart';
+import 'package:astromap/services/api.dart';
+import 'package:astromap/utils/endpoints.dart';
 import 'package:astromap/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +42,10 @@ class LoginScreen extends StatelessWidget {
               ),
               padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20)
             ),
-            onPressed: () {},
+            onPressed: () {
+              // SOLO TEST
+              Api().post(Endpoints.login, {"username":"gmp97", "password" : "11091997gmp"});
+            },
             child: const Text("Iniciar sesión", style: TextStyle(color: Colors.black)),
           ),
     
