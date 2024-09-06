@@ -16,15 +16,6 @@ class Api {
       body: jsonEncode(data),
     );
 
-    print(response.body);
-
-
-    // if (response.statusCode == 200 || response.statusCode == 201) {
-    //   return jsonDecode(response.body) as Map<String, dynamic>;
-    // } else {
-    //   throw Exception('Failed to post data');
-    // }
-
   }
 
 }
