@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 class SatelliteCard extends StatelessWidget {
 
-  String name;
+  final String name;
 
-  SatelliteCard({
+  const SatelliteCard({
     super.key, 
     required this.name,
   });
 
   @override
   Widget build(BuildContext context) {
-     return Card(
+    return Card(
       color: const Color(0xFF1E1E1E),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),

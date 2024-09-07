@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:astromap/screens/auth/login.dart';
 import 'package:astromap/screens/screens.dart';
 import 'package:astromap/theme/themes.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +31,7 @@ return super.createHttpClient(context)
 
 void main() async {
 WidgetsFlutterBinding.ensureInitialized();
-HttpOverrides.global = new MyHttpOverrides();
+HttpOverrides.global = MyHttpOverrides();
 runApp(const MyApp());}
 
 
