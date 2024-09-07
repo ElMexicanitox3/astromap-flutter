@@ -8,7 +8,7 @@ class SatellitesList extends StatelessWidget {
   
   SatellitesList({super.key});
 
-  List<Satellite> satellites = [
+  final List<Satellite> satellites = [
     Satellite(id: 1, name: "x"),
     Satellite(id: 2, name: "y"),
     Satellite(id: 3, name: "z"),
