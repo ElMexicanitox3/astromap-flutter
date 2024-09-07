@@ -1,2 +1,2 @@
-export 'package:astromap/interfaces/Satellites.dart';
-export 'package:astromap/interfaces/LoginResponse.dart';
+export 'package:astromap/interfaces/satellites.dart';
+export 'package:astromap/interfaces/loginResponse.dart';

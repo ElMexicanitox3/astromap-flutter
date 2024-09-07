@@ -1,4 +1,4 @@
-import '../interfaces/Satellites.dart';
+import '../interfaces/satellites.dart';
 import 'package:http/http.dart' as http;
 
 
