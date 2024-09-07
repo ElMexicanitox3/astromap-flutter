@@ -5,7 +5,8 @@ import 'package:astromap/widgets/widgets.dart';
 import '../../services/services.dart';  // Asegúrate de importar el servicio
 
 class SatellitesList extends StatelessWidget {
-  SatellitesList({Key? key}) : super(key: key);
+  
+  SatellitesList({super.key});
 
   // Inyectamos el controlador de SatellitesServices
   final SatellitesServices controller = Get.put(SatellitesServices());
@@ -20,7 +21,9 @@ class SatellitesList extends StatelessWidget {
           // Mostrar indicador de carga si está cargando
           if (controller.isLoading.value) {
             return const Center(
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator(
+                color: Color.fromRGBO(255, 255, 255, 0.5),
+              ),
             );
           }
 
