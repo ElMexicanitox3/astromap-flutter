@@ -12,4 +12,17 @@ class AppTheme {
     
   }
 
+  // text styles
+  static TextStyle title = const TextStyle(
+    color: Colors.white,
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+  );
+
+  // subtitle
+  static TextStyle subtitle = title.copyWith(
+    fontSize: 16,
+    fontWeight: FontWeight.normal,
+  );
+
 }

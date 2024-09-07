@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: AppTheme().def,
-      home: SatellitesList(),
+      home: const MenuAstromap(),
     );
   }
 }
