@@ -1,42 +1,53 @@
-import 'package:astromap/interfaces/interfaces.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:astromap/widgets/widgets.dart';
 
-
+import '../../services/services.dart';  // Asegúrate de importar el servicio
 
 class SatellitesList extends StatelessWidget {
-  
-  SatellitesList({super.key});
+  SatellitesList({Key? key}) : super(key: key);
 
-  final List<Satellite> satellites = [
-    Satellite(id: 1, name: "x"),
-    Satellite(id: 2, name: "y"),
-    Satellite(id: 3, name: "z"),
-    Satellite(id: 4, name: "w"),
-    Satellite(id: 5, name: "v"),
-  ];
+  // Inyectamos el controlador de SatellitesServices
+  final SatellitesServices controller = Get.put(SatellitesServices());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.black,
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              
-              // recorremos la lista de satelites
-              for (var satellite in satellites)...[
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: SatelliteCard(name: satellite.name),
-                ),
-              ]
-              
-            ],
-          ),
-        ),
-      )
+        child: Obx(() {
+
+          // Mostrar indicador de carga si está cargando
+          if (controller.isLoading.value) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+
+          // Si no hay satélites, mostrar un mensaje
+          if (controller.satellites.isEmpty) {
+            return const Center(
+              child: Text('No hay satélites disponibles'),
+            );
+          }
+
+          // Mostrar la lista de satélites
+          return SingleChildScrollView(
+            child: Column(
+              children: [
+                // Recorremos la lista de satélites proveniente del controlador
+                for (var satellite in controller.satellites)...[
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: SatelliteCard(name: satellite.name),
+                  ),
+                ]
+              ],
+            ),
+          );
+          
+        }),
+      ),
     );
   }
 }
