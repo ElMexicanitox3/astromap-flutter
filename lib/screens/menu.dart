@@ -16,13 +16,22 @@ class MenuAstromap  extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
 
-            const Text(
-              'AstroMap',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+            Row(
+              children: [
+                Image.asset(
+                  "assets/img/LOGO-DIEGO-ORIGINAL1.png",
+                  width: screenWidth * 0.08,
+                ),
+                const SizedBox(width: 10),
+                const Text(
+                  'AstroMap',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
 
             // Menu Botton
@@ -79,6 +88,84 @@ class MenuAstromap  extends StatelessWidget {
                   ),
                 ),
               ],
+
+              const SizedBox(height: 20),
+
+              Text(
+                "Lo que hacemos", 
+                style: AppTheme.subtitle,
+                textAlign: TextAlign.left,
+              ),
+
+              Text(
+                "Nuestro objetivo es despertar el interés y la curiosidad en nuevas personas brindando una experiencia única y cautivadora mientras exploran las maravillas del universo", 
+                style: AppTheme.title,
+                textAlign: TextAlign.left,
+              ),
+
+              const SizedBox(height: 20),
+
+              Text(
+                "Trabajamos para crear algo único", 
+                style: AppTheme.title,
+                textAlign: TextAlign.left,
+              ),
+
+              Text(
+                "Aún estamos en una fase temprana de desarrollo, es posible que encuentres algunos errores o problemas en el sitio web. Por lo que te pedimos paciencia mientras trabajamos en solucionar cualquier problema que surja.", 
+                style: AppTheme.subtitle,
+                textAlign: TextAlign.left,
+              ),
+
+              const SizedBox(height: 20),
+
+              //line
+              Container(
+                height: 1,
+                color: Colors.white.withOpacity(0.5),
+              ),
+
+              const SizedBox(height: 20),
+
+              Text(
+                "Explora el universo con nosotros", 
+                style: AppTheme.title,
+                textAlign: TextAlign.left,
+              ),
+
+              Text(
+                "Gracias por visitar nuestro sitio y ser parte de nuestra comunidad. Estamos emocionados de compartir nuestro proyecto contigo y esperamos que disfrutes de la experiencia de crear tu propio mapa.", 
+                style: AppTheme.subtitle,
+                textAlign: TextAlign.left,
+              ),
+
+              const SizedBox(height: 20),
+
+              Container(
+                height: 1,
+                color: Colors.white.withOpacity(0.2),
+              ),
+
+              const SizedBox(height: 20),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [ 
+                  Image.asset(
+                    "assets/img/LOGO-DIEGO-ORIGINAL1.png",
+                    width: screenWidth * 0.08,
+                  ),
+                  const SizedBox(width: 10),
+                  Text(
+                    "AstroMap",
+                    style: AppTheme.title.copyWith(
+                      fontSize: screenWidth * 0.05,
+                    ),
+                  )
+                ],
+              )
+
+              
               
             ],
           ),
