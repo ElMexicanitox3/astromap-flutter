@@ -1,15 +1,14 @@
+import 'package:astromap/controllers/controllers.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:astromap/widgets/widgets.dart';
-
-import '../../services/services.dart';  // Asegúrate de importar el servicio
 
 class SatellitesList extends StatelessWidget {
   
   SatellitesList({super.key});
 
   // Inyectamos el controlador de SatellitesServices
-  final SatellitesServices controller = Get.put(SatellitesServices());
+  final SatellitesController controller = Get.put(SatellitesController());
 
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import '../interfaces/satellites.dart';
+import '../models/satellites/satellites.dart';
 import 'package:http/http.dart' as http;
 
-class SatellitesServices extends GetxController {
+class SatellitesController extends GetxController {
   var isLoading = false.obs;
   var satellites = <Satellite>[].obs;  // Lista observable
 
