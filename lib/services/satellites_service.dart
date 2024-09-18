@@ -23,11 +23,11 @@ class SatellitesServices extends GetxController {
       if (response.statusCode == 200) {
         satellites.value = satelliteFromJson(response.body);  // Usamos el setter de la lista observable
       } else {
-        print('Error: ${response.statusCode}');
+        // print('Error: ${response.statusCode}');
       }
 
     } catch (e) {
-      print('Error: $e');
+      // print('Error: $e');
     } finally {
       isLoading.value = false;
     }
