@@ -1,12 +1,12 @@
-class auth_jwt_create_create {
+class AuthJwtCreateCreate {
   
   String email;
   String password;
 
-  auth_jwt_create_create({required this.email, required this.password});
+  AuthJwtCreateCreate({required this.email, required this.password});
 
-  factory auth_jwt_create_create.fromJson(Map<String, dynamic> json) {
-    return auth_jwt_create_create(
+  factory AuthJwtCreateCreate.fromJson(Map<String, dynamic> json) {
+    return AuthJwtCreateCreate(
       email: json['email'],
       password: json['password'],
     );

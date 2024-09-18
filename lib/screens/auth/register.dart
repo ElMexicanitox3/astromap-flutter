@@ -15,10 +15,10 @@ class RegisterScreen extends StatelessWidget {
           SizedBox(height: size.height * 0.15),
           Text("Registrarse", style: TextStyle(fontSize: size.width * 0.08)),
           const SizedBox(height: 20),
-          const TextFieldCustom(hintText: "Nombre de usuario"),
-          const TextFieldCustom(hintText: "Correo electrónico"),
-          const TextFieldCustom(hintText: "Contraseña"),
-          const TextFieldCustom(hintText: "Confirmar contraseña"),
+          const CustomTextField(hintText: "Nombre de usuario"),
+          const CustomTextField(hintText: "Correo electrónico"),
+          const CustomTextField(hintText: "Contraseña"),
+          const CustomTextField(hintText: "Confirmar contraseña"),
           const SizedBox(height: 10),
           ElevatedButton(
             style: ElevatedButton.styleFrom(

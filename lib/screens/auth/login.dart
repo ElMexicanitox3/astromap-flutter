@@ -29,8 +29,8 @@ class LoginScreen extends StatelessWidget {
           Text("Iniciar sesión", style: TextStyle(fontSize: size.width * 0.08)),
     
           const SizedBox(height: 20),
-          const TextFieldCustom(hintText: "Nombre de usuario"),
-          const TextFieldCustom(hintText: "Contraseña"),
+          const CustomTextField(hintText: "Nombre de usuario"),
+          const CustomTextField(hintText: "Contraseña"),
     
           const SizedBox(height: 10),
           ElevatedButton(
